@@ -1,6 +1,2 @@
-wrangler.json
-wrangler.jsonc
-wrangler.toml
-.dev.vars
-.env
-.env.*
+_worker.js
+_routes.json
