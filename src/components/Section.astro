@@ -1,0 +1,26 @@
+---
+type Props = {
+  id: string;
+  eyebrow?: string;
+  title: string;
+  lede?: string;
+  class?: string;
+};
+
+const {
+  id,
+  eyebrow,
+  title,
+  lede,
+  class: className = ""
+} = Astro.props;
+---
+
+<section id={id} class:list={["section", className]}>
+  <div class="section__heading">
+    {eyebrow && <p class="eyebrow">{eyebrow}</p>}
+    <h2>{title}</h2>
+    {lede && <p class="section__lede">{lede}</p>}
+  </div>
+  <slot />
+</section>

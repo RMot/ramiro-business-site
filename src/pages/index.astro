@@ -1,0 +1,196 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/Hero.astro";
+import Section from "../components/Section.astro";
+import ServiceCard from "../components/ServiceCard.astro";
+
+const title = "Ramiro Motteta | Legacy Web App Modernization";
+const description =
+  "Senior fullstack engineer helping teams modernize legacy .NET, React, and JavaScript applications without risky rewrites.";
+const auditEmail = "mailto:rmotteta@gmail.com?subject=Technical%20audit%20request";
+---
+
+<BaseLayout title={title} description={description}>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="nav__brand" href="/" aria-label="Ramiro Motteta home">Ramiro Motteta</a>
+      <div class="nav__links">
+        <a href="#services">Services</a>
+        <a href="#audit">Audit</a>
+        <a href="#background">Background</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <Hero />
+
+    <Section
+      id="problem"
+      eyebrow="When the system still matters"
+      title="The application is valuable, but harder to change than it should be."
+      lede="Older business systems often carry real revenue, operational knowledge, and years of decisions. The work is not to replace everything. The work is to understand risk and improve the parts that matter."
+    >
+      <div class="problem-grid">
+        <article>
+          <h3>Slow to change</h3>
+          <p>The team needs every release to be careful because small frontend or backend changes can create unexpected production issues.</p>
+        </article>
+        <article>
+          <h3>Fragile dependencies</h3>
+          <p>Old jQuery, Bootstrap, plugins, build tools, or React patterns make simple improvements feel larger than they should.</p>
+        </article>
+        <article>
+          <h3>Heavy dashboards</h3>
+          <p>Reports, grids, and advanced queries are slow, hard to debug, or difficult for users to trust during busy workdays.</p>
+        </article>
+        <article>
+          <h3>Risky rewrite pressure</h3>
+          <p>The team needs an outside senior review before committing to a rewrite, migration, or long modernization project.</p>
+        </article>
+      </div>
+    </Section>
+
+    <Section
+      id="services"
+      eyebrow="Services"
+      title="Practical help for legacy web applications and complex business UI."
+      lede="Focused consulting for teams that need stability, performance, and clear modernization decisions."
+    >
+      <div class="services-grid">
+        <ServiceCard
+          title="Legacy modernization"
+          body="Assess and improve older .NET, React, JavaScript, Bootstrap, and jQuery systems without forcing a risky full rewrite."
+        />
+        <ServiceCard
+          title="Complex UI and dashboard performance"
+          body="Improve reports, data-heavy dashboards, interactive screens, advanced filters, and frontend behavior that slows daily operations."
+        />
+        <ServiceCard
+          title="Technical risk reduction"
+          body="Identify brittle code paths, dependency risks, release hazards, and areas where small improvements can reduce production uncertainty."
+        />
+        <ServiceCard
+          title="Implementation support"
+          body="Support focused modernization sprints after the audit, including frontend migration, backend cleanup, and performance work."
+        />
+      </div>
+    </Section>
+
+    <Section
+      id="audit"
+      class="section--featured"
+      eyebrow="Featured offer"
+      title="Legacy Web App Modernization Audit"
+      lede="A fixed-scope technical review for teams with older web applications that need a safer path forward."
+    >
+      <div class="audit-panel">
+        <div class="audit-panel__main">
+          <h3>What it is</h3>
+          <p>
+            A focused review of the architecture, codebase, frontend behavior, backend risks, dependencies, and performance bottlenecks behind a legacy business application.
+          </p>
+          <p>
+            The goal is to decide what to modernize first, what to leave alone, where the real risks are, and how to improve the system in phases without betting the business on a rewrite.
+          </p>
+          <a class="button button--primary" href={auditEmail}>Request a technical audit</a>
+        </div>
+        <div class="audit-panel__side">
+          <h3>What you receive</h3>
+          <ul class="check-list">
+            <li>Architecture and codebase review</li>
+            <li>Frontend and backend risk assessment</li>
+            <li>Performance and maintainability quick wins</li>
+            <li>Legacy dependency review</li>
+            <li>Phased modernization roadmap</li>
+            <li>30-minute walkthrough call</li>
+          </ul>
+        </div>
+      </div>
+    </Section>
+
+    <Section
+      id="background"
+      eyebrow="Background"
+      title="Built on 10+ years of fullstack engineering work."
+      lede="Ramiro works with business-critical systems where technical decisions need to be careful, understandable, and grounded in production reality."
+    >
+      <div class="background-grid">
+        <div>
+          <h3>Backend and systems</h3>
+          <p>
+            Experience with .NET, ASP.NET Core, Entity Framework, SQL Server, PostgreSQL, Redis, AWS services, advanced data queries, and performance-sensitive application paths.
+          </p>
+        </div>
+        <div>
+          <h3>Frontend and interaction</h3>
+          <p>
+            Work across React, vanilla JavaScript, HTML Canvas, SVG, Bootstrap, DataTables, Select2, legacy jQuery migration, dashboards, reports, and complex UI behavior.
+          </p>
+        </div>
+        <div>
+          <h3>Leadership context</h3>
+          <p>
+            Experience as a tech lead managing remote teams, communicating with technical and non-technical stakeholders, and supporting careful release validation.
+          </p>
+        </div>
+      </div>
+    </Section>
+
+    <Section
+      id="proof"
+      eyebrow="Experience areas"
+      title="Grounded proof without inflated case studies."
+      lede="These are the kinds of systems and project situations Ramiro has worked around. No invented clients, no fake metrics."
+    >
+      <div class="proof-list">
+        <article>
+          <p class="proof-list__label">Legacy frontend modernization</p>
+          <h3>Older UI stacks that need a path forward</h3>
+          <p>Reviewing jQuery, Bootstrap, plugin-heavy screens, and React code that needs gradual migration without interrupting users.</p>
+        </article>
+        <article>
+          <p class="proof-list__label">Performance-heavy dashboards</p>
+          <h3>Reports and data views under real business load</h3>
+          <p>Improving slow grids, expensive queries, interaction bottlenecks, and screens where users need reliable daily throughput.</p>
+        </article>
+        <article>
+          <p class="proof-list__label">Business-critical release support</p>
+          <h3>Production changes that need validation</h3>
+          <p>Helping teams reduce risk before releases, clarify priorities, and avoid broad rewrites when targeted work is safer.</p>
+        </article>
+      </div>
+    </Section>
+
+    <Section
+      id="working-style"
+      eyebrow="Working style"
+      title="Incremental, technical, and clear."
+      lede="The approach is practical: understand the system, reduce risk, improve the highest-value parts, and communicate tradeoffs clearly."
+    >
+      <div class="style-grid">
+        <p>Focus on business value and production safety before architectural fashion.</p>
+        <p>Prefer phased modernization over unnecessary rewrites.</p>
+        <p>Translate technical risk into decisions managers and founders can act on.</p>
+        <p>Work comfortably with existing teams, remote collaboration, and legacy constraints.</p>
+      </div>
+    </Section>
+
+    <section id="contact" class="contact" aria-labelledby="contact-title">
+      <div class="contact__inner">
+        <p class="eyebrow">Contact</p>
+        <h2 id="contact-title">Need a senior technical review of your application?</h2>
+        <p>
+          Send the current stack, the main pain point, and whether you need an audit, implementation support, or a technical second opinion.
+        </p>
+        <a class="button button--primary" href={auditEmail}>Email Ramiro</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Ramiro Motteta</p>
+    <a href="mailto:rmotteta@gmail.com">rmotteta@gmail.com</a>
+  </footer>
+</BaseLayout>

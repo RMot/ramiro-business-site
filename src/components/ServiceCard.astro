@@ -1,0 +1,13 @@
+---
+type Props = {
+  title: string;
+  body: string;
+};
+
+const { title, body } = Astro.props;
+---
+
+<article class="service-card">
+  <h3>{title}</h3>
+  <p>{body}</p>
+</article>
